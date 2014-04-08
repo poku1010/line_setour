@@ -7,7 +7,7 @@
     </p>
   </div>
   <h2><?php echo $post['post_title']; ?></h2>
-  <div class="post_coverphoto_url"><img src="<?php echo base_url().'assets/upload/thumbnails/'.$post['post_coverphoto_url']; ?>" /></div>
+  <div class="post_coverphoto_url"><img src="<?php echo base_url().'assets/upload/'.$post['post_coverphoto_url']; ?>" /></div>
   <hr>
   
   <div class="post_content">
