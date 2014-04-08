@@ -48,7 +48,7 @@
       text-align: center;
     }
     .share_button img{
-      width: 290px;
+      width: 200px;
     }
   
   </style>
