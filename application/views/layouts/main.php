@@ -15,6 +15,16 @@
 	</head>
 	
 	<body>
+  	<script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+    
+      ga('create', 'UA-38360136-2', 'setour.org');
+      ga('send', 'pageview');
+    
+    </script>
     <div class='container'>
       <!-- Static navbar -->
       <div class="navbar navbar-default" role="navigation">
@@ -30,7 +40,7 @@
           </div>
           <div class="navbar-collapse collapse">
             <ul class="nav navbar-nav navbar-right">
-              <li><a href="#">關於我們</a></li>
+<!--               <li><a href="#">關於我們</a></li> -->
               <li><a href="mailto:hi@setour.org">聯絡我們</a></li>
             </ul>
           </div><!--/.nav-collapse -->
