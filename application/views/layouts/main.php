@@ -66,7 +66,7 @@
 	
 	<div id="footer">
     <div class="container">
-      <p class="text-muted">© SETour</p>
+      <p class="text-muted">© SETour. By <a href="http://facebook.com/poku1010" target="_blank">Poku Ku</a></p>
     </div>
   </div>
   

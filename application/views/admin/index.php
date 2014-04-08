@@ -2,35 +2,19 @@
 <script type="text/javascript">
 
 $(document).ready(function() {
-						   
-						   
-	var $body = $('body'),
-		$content = $('#content'),
-		$form = $content.find('#loginform');
-	
-		
-		//IE doen't like that fadein
-		if(!$.browser.msie) $body.fadeTo(0,0.0).delay(500).fadeTo(1000, 1);
-		
-		
-		$("input").uniform();
-		
-
-		$form.wl_Form({
-			status:false,
-			onBeforeSubmit: function(data){
-				$form.wl_Form('set','sent',false);
-				if(data.username || data.password){
-					//location.href="dashboard";
-					location.href="<?php echo base_url();?>admin/dashboard";
-				}else{
-					$.wl_Alert('帳號或密碼忘記輸入囉!','info','#content');
-				}
-				return false;
-			}							  
-		});
-		
-		
+               
+               
+  var $body = $('body'),
+    $content = $('#content'),
+    $form = $content.find('#loginform');
+  
+    
+    //IE doen't like that fadein
+    if(!$.browser.msie) $body.fadeTo(0,0.0).delay(500).fadeTo(1000, 1);
+    
+    
+    $("input").uniform();
+    
 });
 
 </script>
@@ -39,11 +23,12 @@ $(document).ready(function() {
 
   <header>
     <div id="logo">
-      <a href="<?php echo base_url();?>admin/index">台大投票系統管理後台</a>
+      <a href="<?php echo base_url();?>admin/index">奈奈救台灣管理後台</a>
     </div>
   </header>
   <section id="content">
-    <form action="submit.php" id="loginform">
+    <?php echo validation_errors(); ?>
+    <?php echo form_open('verifylogin'); ?>
       <fieldset>
         <section><label for="username">帳號 </label>
           <div><input type="text" id="username" name="username" autofocus></div>
@@ -52,10 +37,6 @@ $(document).ready(function() {
           <div>
             <input type="password" id="password" name="password">
           </div>
-          <!--div>
-            <input type="checkbox" id="remember" name="remember">
-            <label for="remember" class="checkbox">記住我</label>
-          </div-->
         </section>
         <section>
           <div><button class="fr submit">登入</button></div>
@@ -63,5 +44,5 @@ $(document).ready(function() {
       </fieldset>
     </form>
   </section>
-  <footer>Copyright by ntu.edu.tw 2014</footer>
+  <footer>© SETour. By <a href="http://facebook.com/poku1010" target="_blank">Poku Ku</a></footer>
 </body>

@@ -76,13 +76,13 @@
   <body>
     <div id="pageoptions">
       <ul>
-        <li><a href="<?php echo base_url();?>admin">登出</a></li>
+        <li><a href="<?php echo base_url();?>admin/logout">登出</a></li>
       </ul>
     </div>
   
     <header>
       <div id="logo">
-        <a href="<?php echo base_url();?>admin">奈奈救台灣管理後台</a>
+        <a href="<?php echo base_url();?>admin/dashboard">奈奈救台灣管理後台</a>
       </div>
     </header>
   
@@ -94,6 +94,6 @@
     </nav>
 
     <?php echo $template['body']; ?>
-    <footer>© SETour</footer>
+    <footer>© SETour. By <a href="http://facebook.com/poku1010" target="_blank">Poku Ku</a></footer>
   </body>
 </html>

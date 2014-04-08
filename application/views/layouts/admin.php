@@ -1,8 +1,10 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>台大投票系統管理後台</title>
+    <title>奈奈救台灣管理後台</title>
     <meta charset='utf8' />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
     <?php echo $template['metadata']; ?>
     
     <!-- Use Google CDN for jQuery and jQuery UI -->

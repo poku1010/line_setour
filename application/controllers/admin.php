@@ -1,5 +1,6 @@
 <?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 date_default_timezone_set('Asia/Taipei');
+session_start(); //we need to call PHP's session object to access it through CI
 
 class Admin extends CI_Controller {
 
@@ -19,21 +20,54 @@ class Admin extends CI_Controller {
    * @see http://codeigniter.com/user_guide/general/urls.html
    */
   
+/*
   public function index()
   {
+    $this->template->set_layout('dashboard');
+    $this->template->build('admin/dashboard');
+  }
+*/
+
+  public function index()
+  {
+    $this->load->helper(array('form'));
+    $this->template->set_layout('admin');
+    $this->template->build('admin/index');
+  }
+  
+  public function dashboard()
+  {
+    if($this->session->userdata('logged_in'))
+    {
       $this->template->set_layout('dashboard');
       $this->template->build('admin/dashboard');
+    }
+    else
+    {
+      //If no session, redirect to login page
+      redirect('admin', 'refresh');
+    }
   }
   
   public function post_add()
   {
+    if($this->session->userdata('logged_in'))
+    {
       $this->template->set_layout('dashboard');
       $this->template->build('admin/post_add');
+    }
+    else
+    {
+      //If no session, redirect to login page
+      redirect('admin', 'refresh');
+    }
   }
   
   
   public function post_add_db()
   {
+    if($this->session->userdata('logged_in'))
+    {
       $data = $this->input->post();
       $data['post_coverphoto_url'] = $data['post_coverphoto_url'][0];
       $data['post_created_time'] = date('Y-m-d H:i:s');
@@ -48,18 +82,35 @@ class Admin extends CI_Controller {
       } else {
         echo "something error please contact poku1010@gmail.com";
       }
+    }
+    else
+    {
+      //If no session, redirect to login page
+      redirect('admin', 'refresh');
+    }
+
   }
   
   public function post_edit($post_id)
   {
+    if($this->session->userdata('logged_in'))
+    {
       $this->load->model('st_posts_model');
       $data['post'] = $this->st_posts_model->as_array()->get($post_id);
       $this->template->set_layout('dashboard');
       $this->template->build('admin/post_edit', $data);
+    }
+    else
+    {
+      //If no session, redirect to login page
+      redirect('admin', 'refresh');
+    }
   }
   
   public function post_edit_db()
   {
+    if($this->session->userdata('logged_in'))
+    {
       $data = $this->input->post();
       if($data['post_coverphoto_url'][0]){
         $data['post_coverphoto_url'] = $data['post_coverphoto_url'][0];
@@ -75,18 +126,34 @@ class Admin extends CI_Controller {
       } else {
         echo "something error please contact poku1010@gmail.com";
       }
+    }
+    else
+    {
+      //If no session, redirect to login page
+      redirect('admin', 'refresh');
+    }
   }
   
   public function post_manage()
   {
+    if($this->session->userdata('logged_in'))
+    {
       $this->load->model('st_posts_model');
       $data['posts'] = $this->st_posts_model->as_array()->get_all();
       $this->template->set_layout('dashboard');
       $this->template->build('admin/post_manage', $data);
+    }
+    else
+    {
+      //If no session, redirect to login page
+      redirect('admin', 'refresh');
+    }
   }
   
   public function post_delete($delete_id)
   {
+    if($this->session->userdata('logged_in'))
+    {
       $this->load->model('st_posts_model');
       try{
           $this->st_posts_model->remove($delete_id);
@@ -94,6 +161,12 @@ class Admin extends CI_Controller {
           echo 'Something went wrong...';
       }
       redirect( base_url().'admin/post_manage');
+    }
+    else
+    {
+      //If no session, redirect to login page
+      redirect('admin', 'refresh');
+    }
   }
   
   public function example()
@@ -102,6 +175,13 @@ class Admin extends CI_Controller {
       $this->template->build('admin/example');
   }
   
+  function logout()
+  {
+   $this->session->unset_userdata('logged_in');
+   session_destroy();
+   redirect('admin', 'refresh');
+  }
+
   
   
 }
