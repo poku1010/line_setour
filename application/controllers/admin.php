@@ -77,7 +77,7 @@ class Admin extends CI_Controller {
       if($status){
         $path = base_url() ."admin/post_manage";
         //header('Refresh: 1; URL='.$path);
-        echo "\n<script type=\"text/javascript\"alert('文章送出成功! 1秒後跳至文章管理頁');;</script>\n";
+        echo "\n<script type=\"text/javascript\">alert('文章送出成功!');</script>\n";
         echo "\n<script type=\"text/javascript\">window.location.replace('$path');</script>\n";
       } else {
         echo "something error please contact poku1010@gmail.com";
@@ -122,7 +122,7 @@ class Admin extends CI_Controller {
         //echo "文章修改成功! 1秒後跳至文章管理頁";
         $path = base_url() ."admin/post_manage";
         //header('Refresh: 1; URL='.$path);
-        echo "\n<script type=\"text/javascript\"alert('文章修改成功! 1秒後跳至文章管理頁');;</script>\n";
+        echo "\n<script type=\"text/javascript\">alert('文章修改成功!');</script>\n";
         echo "\n<script type=\"text/javascript\">window.location.replace('$path');</script>\n";
       } else {
         echo "something error please contact poku1010@gmail.com";
