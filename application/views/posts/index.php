@@ -2,7 +2,7 @@
 <div class="jumbotron">
   <div class="share_button">
     <p>
-      <a href="http://line.naver.jp/R/msg/text/?<?php echo $post['post_quote'] ?>%20%0a<?php echo base_url().'posts/'.$post['post_id']; ?>">
+      <a href="http://line.naver.jp/R/msg/text/?<?php echo $post['post_quote'] ?>(請用手機瀏覽)%20%0a<?php echo base_url().'posts/'.$post['post_id']; ?>">
       <img src="<?php echo base_url() ?>assets/img/linebutton_290x44.png"></a>
     </p>
   </div>
@@ -20,7 +20,7 @@
   
   <div class="share_button">
     <p>
-      <a href="http://line.naver.jp/R/msg/text/?<?php echo $post['post_quote'] ?>%20%0a<?php echo base_url().'posts/'.$post['post_id']; ?>">
+      <a href="http://line.naver.jp/R/msg/text/?<?php echo $post['post_quote'] ?>(請用手機瀏覽)%20%0a<?php echo base_url().'posts/'.$post['post_id']; ?>">
       <img src="<?php echo base_url() ?>assets/img/linebutton_290x44.png"></a>
     </p>
   </div>
