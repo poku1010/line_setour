@@ -35,7 +35,7 @@ class Admin extends CI_Controller {
   public function post_add_db()
   {
       $data = $this->input->post();
-      $data['post_coverphoto_url'] =  base_url() . 'assets/upload/'. $data['post_coverphoto_url'][0];
+      $data['post_coverphoto_url'] = $data['post_coverphoto_url'][0];
       $data['post_created_time'] = date('Y-m-d H:i:s');
       $this->load->model('st_posts_model');
       $status = $this->st_posts_model->insert($data);
@@ -62,7 +62,7 @@ class Admin extends CI_Controller {
   {
       $data = $this->input->post();
       if($data['post_coverphoto_url'][0]){
-        $data['post_coverphoto_url'] = base_url() . 'assets/upload/'. $data['post_coverphoto_url'][0];
+        $data['post_coverphoto_url'] = $data['post_coverphoto_url'][0];
       }
       $this->load->model('st_posts_model');
       $status = $this->st_posts_model->update($data['post_id'], $data);
