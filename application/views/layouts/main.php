@@ -5,7 +5,9 @@
     <title>奈奈救台灣</title>
     <?php  if ( $this->uri->segment(1)=='posts' ){  ?>
       <meta property="og:title"  content="<?php echo $post['post_quote'] ?>" /> 
-      <meta property="og:description"  content="<?php echo $post['post_scenario'] ?>" /> 
+<!--       <meta property="og:description"  content="<?php echo $post['post_scenario'] ?>" />  -->
+      <meta property="og:description"  content="<?php echo mb_substr( $post['post_content'], 0, 100, "utf-8"); ?>" /> 
+
       <meta property="og:image"  content="<?php echo base_url().'assets/upload/'.$post['post_coverphoto_url']; ?>" /> 
     <?php } else { ?>
       <meta property="og:title"  content="一個好方法，降低你與家人間的溝通成本" /> 
