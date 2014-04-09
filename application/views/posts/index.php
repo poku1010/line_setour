@@ -11,7 +11,9 @@
     </p>
   </div>
   <h3><?php echo $post['post_title']; ?></h3>
+  <?php if($post['post_coverphoto_url']){ ?>
   <div class="post_coverphoto_url"><img src="<?php echo base_url().'assets/upload/'.$post['post_coverphoto_url']; ?>" /></div>
+  <?php } ?>
   <hr>
   
   <div class="post_content">
