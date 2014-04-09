@@ -11,7 +11,7 @@
       <meta property="og:image"  content="<?php echo base_url().'assets/upload/'.$post['post_coverphoto_url']; ?>" /> 
     <?php } else { ?>
       <meta property="og:title"  content="一個好方法，降低你與家人間的溝通成本" /> 
-      <meta property="og:description"  content="溝通要用對方法！給長輩們一個不同的想法──由他們世代的人來說服，不立即從理性的觀點/口吻/角度切入，以免太早拉起警報。用LINE，散播這些屬於他們世代的故事。讓我們「奈奈救台灣！」" /> 
+      <meta property="og:description"  content="溝通要用對方法！溝通，從訴說故事開始。不那麼急著尋求認同與肯定，不那麼快切入正反兩極。對於愛著我們的長輩，溝通，自充滿愛的故事開啟。溝通，從傳遞故事開始。說一個故事，然後讓這個故事傳出去。溝通，給愛著我們的長輩充滿愛的故事，讓他們把愛也傳遞出去。" /> 
       <meta property="og:image"  content="<?php echo base_url().'assets/img/main_cover.jpg'; ?>" /> 
     <?php } ?>
       
