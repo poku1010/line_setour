@@ -2,11 +2,15 @@
 <div class="jumbotron">
   <div class="share_button">
     <p>
-      <a href="http://line.naver.jp/R/msg/text/?<?php echo $post['post_quote'] ?>%20%0a<?php echo base_url().'posts/'.$post['post_id']; ?>">
+      <a href="http://line.naver.jp/R/msg/text/?<?php echo $post['post_quote'] ?>%20%0a<?php echo base_url().'posts/'.$post['post_id']; ?>" target="_blank">
       <img src="<?php echo base_url() ?>assets/img/linebutton_290x44.png"></a>
     </p>
+    <p>
+      <a href="http://m.facebook.com/sharer.php?u=<?php echo base_url().'posts/'.$post['post_id']; ?>" target="_blank">
+      <img src="<?php echo base_url() ?>assets/img/button-fb-share.png"></a>
+    </p>
   </div>
-  <h2><?php echo $post['post_title']; ?></h2>
+  <h3><?php echo $post['post_title']; ?></h3>
   <div class="post_coverphoto_url"><img src="<?php echo base_url().'assets/upload/'.$post['post_coverphoto_url']; ?>" /></div>
   <hr>
   
@@ -20,8 +24,12 @@
   
   <div class="share_button">
     <p>
-      <a href="http://line.naver.jp/R/msg/text/?<?php echo $post['post_quote'] ?>%20%0a<?php echo base_url().'posts/'.$post['post_id']; ?>">
+      <a href="http://line.naver.jp/R/msg/text/?<?php echo $post['post_quote'] ?>%20%0a<?php echo base_url().'posts/'.$post['post_id']; ?>" target="_blank">
       <img src="<?php echo base_url() ?>assets/img/linebutton_290x44.png"></a>
+    </p>
+    <p>
+      <a href="http://m.facebook.com/sharer.php?u=<?php echo base_url().'posts/'.$post['post_id']; ?>" target="_blank">
+      <img src="<?php echo base_url() ?>assets/img/button-fb-share.png"></a>
     </p>
   </div>
 </div>

@@ -1,6 +1,6 @@
 <!-- Main component for index -->
 <div class="jumbotron">
-  <h2>《緣起》</h2>
+  <h3>《緣起》</h3>
   <hr>
   <p>溝通要用對方法！</p>
   <p>給長輩們一個不同的想法──由他們世代的人來說服，</p>
@@ -10,7 +10,7 @@
 </div>
 
 <div class="jumbotron">
-  <h2>《說明》</h2>
+  <h3>《說明》</h3>
   <hr>
   <p>請選擇長輩們會有共鳴的故事，</p>
   <p>點進去後，用LINE分享給他們。</p>
@@ -23,7 +23,7 @@
 <?php if( count($posts) > 0 ): ?>
 <?php foreach ($posts as $post): ?>      
 <div class="jumbotron main_post">
-  <h2>文章標題：<?php echo $post['post_title'] ?></h2>
+  <h3>文章標題：<?php echo $post['post_title'] ?></h3>
   <hr>
   <h3>使用情境</h3>
   <div class="post_scenario">
@@ -31,11 +31,13 @@
   </div>
   <hr>
   <div class="share_button">
-    <p><a class="btn btn-lg btn-primary" href="<?php echo base_url().'posts/'.$post['post_id']; ?>" role="button">觀看全文 &raquo;</a></p>
-    <hr>
     <p>
-      <a href="http://line.naver.jp/R/msg/text/?<?php echo $post['post_quote'] ?>%20%0a<?php echo base_url().'posts/'.$post['post_id']; ?>">
-      <img src="<?php echo base_url() ?>/assets/img/linebutton_290x44.png"></a>
+      <a href="http://line.naver.jp/R/msg/text/?<?php echo $post['post_quote'] ?>%20%0a<?php echo base_url().'posts/'.$post['post_id']; ?>" target="_blank">
+      <img src="<?php echo base_url() ?>assets/img/linebutton_290x44.png"></a>
+    </p>
+    <p>
+      <a href="http://m.facebook.com/sharer.php?u=<?php echo base_url().'posts/'.$post['post_id']; ?>" target="_blank">
+      <img src="<?php echo base_url() ?>assets/img/button-fb-share.png"></a>
     </p>
   </div>
 </div>

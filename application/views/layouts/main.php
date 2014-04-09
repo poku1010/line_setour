@@ -1,21 +1,33 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<title>奈奈救台灣</title>
+  <head>
+     
+    <title>奈奈救台灣</title>
+    <?php  if ( $this->uri->segment(1)=='posts' ){  ?>
+      <meta property="og:title"  content="<?php echo $post['post_quote'] ?>" /> 
+      <meta property="og:description"  content="<?php echo $post['post_scenario'] ?>" /> 
+      <meta property="og:image"  content="<?php echo base_url().'assets/upload/'.$post['post_coverphoto_url']; ?>" /> 
+    <?php } else { ?>
+      <meta property="og:title"  content="一個好方法，降低你與家人間的溝通成本" /> 
+      <meta property="og:description"  content="溝通要用對方法！給長輩們一個不同的想法──由他們世代的人來說服，不立即從理性的觀點/口吻/角度切入，以免太早拉起警報。用LINE，散播這些屬於他們世代的故事。讓我們「奈奈救台灣！」" /> 
+    <?php } ?>
+      
+    <meta property="og:site_name" content="奈奈救台灣" />
+    
     <meta charset='utf8' />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">    
-		<?php echo $template['metadata']; ?>
+    <?php echo $template['metadata']; ?>
     <link rel="stylesheet" href="<?php echo base_url() ?>/assets/css/font-awesome.min.css">
-		<link rel="stylesheet" type="text/css" media="all" href="<?php echo base_url() ?>/assets/css/bootstrap.min.css">
-		<link href="<?php echo base_url() ?>/assets/css/navbar.css" rel="stylesheet">
-		
+    <link rel="stylesheet" type="text/css" media="all" href="<?php echo base_url() ?>/assets/css/bootstrap.min.css">
+    <link href="<?php echo base_url() ?>/assets/css/navbar.css" rel="stylesheet">
+    
     <script type="text/javascript" src="<?php echo base_url() ?>/assets/js/jquery-1.10.2.min.js"></script> 
     <script type="text/javascript" src="<?php echo base_url() ?>/assets/js/bootstrap.min.js"></script>      
-	</head>
-	
-	<body>
-  	<script>
+  </head>
+  
+  <body>
+    <script>
       (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
       (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
       m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
@@ -48,9 +60,9 @@
       </div>
       <?php echo $template['body']; ?>
     </div>
-	</body>
-	
-	<style>
+  </body>
+  
+  <style>
     body{
       font-family: 微軟正黑體;
     }
@@ -63,8 +75,8 @@
   
   </style>
 
-	
-	<div id="footer">
+  
+  <div id="footer">
     <div class="container">
       <p class="text-muted">© SETour. By <a href="http://facebook.com/poku1010" target="_blank">Poku Ku</a></p>
     </div>
