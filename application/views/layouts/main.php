@@ -10,6 +10,7 @@
     <?php } else { ?>
       <meta property="og:title"  content="一個好方法，降低你與家人間的溝通成本" /> 
       <meta property="og:description"  content="溝通要用對方法！給長輩們一個不同的想法──由他們世代的人來說服，不立即從理性的觀點/口吻/角度切入，以免太早拉起警報。用LINE，散播這些屬於他們世代的故事。讓我們「奈奈救台灣！」" /> 
+      <meta property="og:image"  content="<?php echo base_url().'assets/img/main_cover.jpg'; ?>" /> 
     <?php } ?>
       
     <meta property="og:site_name" content="奈奈救台灣" />
