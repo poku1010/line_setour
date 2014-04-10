@@ -2,7 +2,7 @@
 <html>
   <head>
      
-    <title>奈奈救台灣</title>
+    <title>奈奈(LineLine)救台灣</title>
     <?php  if ( $this->uri->segment(1)=='posts' ){  ?>
       <meta property="og:title"  content="<?php echo $post['post_quote'] ?>" /> 
 <!--       <meta property="og:description"  content="<?php echo $post['post_scenario'] ?>" />  -->
@@ -15,7 +15,7 @@
       <meta property="og:image"  content="<?php echo base_url().'assets/img/main_cover.jpg'; ?>" /> 
     <?php } ?>
       
-    <meta property="og:site_name" content="奈奈救台灣" />
+    <meta property="og:site_name" content="奈奈(LineLine)救台灣" />
     
     <meta charset='utf8' />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -51,7 +51,7 @@
               <span class="icon-bar"></span>
               <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="<?php echo base_url() ?>">奈奈救台灣</a>
+            <a class="navbar-brand" href="<?php echo base_url() ?>">奈奈(LineLine)救台灣</a>
           </div>
           <div class="navbar-collapse collapse">
             <ul class="nav navbar-nav navbar-right">
