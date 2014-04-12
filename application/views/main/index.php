@@ -28,7 +28,8 @@
 <div class="jumbotron main_post">
   <div class="post_thumbnail"><img src="<?php echo base_url().'assets/upload/thumbnails/'.$post['post_coverphoto_url']; ?>" /></div>
   <h3><?php echo $post['post_title'] ?></h3>
-  <hr>
+  <div style="clear:both;"></div>
+  
   <h3>使用情境</h3>
   <div class="post_scenario">
     <pre><?php echo $post['post_scenario'] ?></pre>
