@@ -41,6 +41,6 @@
     width: 100%;
   }
   .post_content pre{
-    font-size: 16px;
+    font-size: 20px;
   }
 </style>

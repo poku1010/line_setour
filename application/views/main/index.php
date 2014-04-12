@@ -53,7 +53,7 @@
 
 <style>
   .post_scenario pre{
-    font-size: 16px;
+    font-size: 20px;
   }
   .main_post .post_thumbnail{
     float: left;

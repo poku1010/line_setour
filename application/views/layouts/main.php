@@ -75,6 +75,9 @@
     .share_button img{
       width: 200px;
     }
+    .jumbotron{
+      padding: 5px !important;
+    }
   
   </style>
 
