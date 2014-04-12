@@ -26,7 +26,8 @@
 <?php if( count($posts) > 0 ): ?>
 <?php foreach ($posts as $post): ?>      
 <div class="jumbotron main_post">
-  <h3>文章標題：<?php echo $post['post_title'] ?></h3>
+  <div class="post_thumbnail"><img src="<?php echo base_url().'assets/upload/thumbnails/'.$post['post_coverphoto_url']; ?>" /></div>
+  <h3><?php echo $post['post_title'] ?></h3>
   <hr>
   <h3>使用情境</h3>
   <div class="post_scenario">
@@ -53,5 +54,12 @@
 <style>
   .post_scenario pre{
     font-size: 16px;
+  }
+  .main_post .post_thumbnail{
+    float: left;
+    padding: 6px;
+  }
+  .main_post .post_thumbnail img{
+    border-radius: 10px;
   }
 </style>
