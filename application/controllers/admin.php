@@ -112,11 +112,15 @@ class Admin extends CI_Controller {
     if($this->session->userdata('logged_in'))
     {
       $data = $this->input->post();
-      if($data['post_coverphoto_url'][0]){
+      if($data['post_coverphoto_url'][0]!='n'){
         $data['post_coverphoto_url'] = $data['post_coverphoto_url'][0];
+      }
+      else {
+        unset($data['post_coverphoto_url']);
       }
       $this->load->model('st_posts_model');
       $status = $this->st_posts_model->update($data['post_id'], $data);
+      
       
       if($status){
         //echo "文章修改成功! 1秒後跳至文章管理頁";

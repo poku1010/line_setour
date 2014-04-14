@@ -26,7 +26,9 @@
 <?php if( count($posts) > 0 ): ?>
 <?php foreach ($posts as $post): ?>      
 <div class="jumbotron main_post">
+  <?php if($post['post_coverphoto_url']!='n'){ ?>
   <div class="post_thumbnail"><img src="<?php echo base_url().'assets/upload/thumbnails/'.$post['post_coverphoto_url']; ?>" /></div>
+  <?php } ?>
   <h3><?php echo $post['post_title'] ?></h3>
   <div style="clear:both;"></div>
   
